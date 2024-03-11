@@ -8,7 +8,7 @@ export const apiProducts = (options) => {
   const authString = md5(`${password}_${timestamp}`);
 
   return axios
-    .post('https://apis.valantis.store:41000/', options, {
+    .post('https://api.valantis.store:41000/', options, {
       headers: {
         'X-Auth': authString,
       },
