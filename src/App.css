@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.blocks {
+  display: flex;
+  flex-direction: row;
+}
+.main__title {
+  font-size: 35px;
+  margin: 0;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+.main {
+  margin: 0 20px 0 20px;
+}
+.error_message {
+  color: red;
+  text-align: center;
+}
