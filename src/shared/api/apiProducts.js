@@ -7,9 +7,14 @@ export const apiProducts = (options) => {
   const timestamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
   const authString = md5(`${password}_${timestamp}`);
 
-  return axios.post('https://api.valantis.store:41000/', options, {
-    headers: {
-      'X-Auth': authString,
-    },
-  });
+  return axios
+    .post('https://api.valantis.store:41000/', options, {
+      headers: {
+        'X-Auth': authString,
+      },
+    })
+    .catch((error) => {
+      console.error('Error in API request:', error);
+      throw error;
+    });
 };
